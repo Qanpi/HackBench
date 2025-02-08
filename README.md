@@ -82,18 +82,3 @@ We welcome contributions from the community! If you'd like to **add new test cas
 
 ##  License
 HackBench is released under the **MIT License**.
-
-# EV-01
-
-## Description
-A simple PHP web application that displays a list of books. 
-
-Difficulty: Easy
-
-## Build
-1. Make sure you have Docker and Docker Compose installed
-2. Run `docker-compose up -d` to start the application
-
-
-
-
