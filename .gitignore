@@ -2,3 +2,4 @@ solution.md
 .DS_Store
 solution/
 .env
+.vscode/
