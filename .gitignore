@@ -4,3 +4,6 @@ solution/
 .env
 .vscode/
 *.log
+
+chroma_db/
+chromadb/
