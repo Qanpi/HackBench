@@ -3,6 +3,9 @@ solution.md
 solution/
 .env
 .vscode/
+.devcontainer/
+.github/
+.venv/
 *.log
 
 chroma_db/
