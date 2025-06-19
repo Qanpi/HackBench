@@ -12,6 +12,7 @@ chroma_db/
 chromadb/
 
 cves/
+tmp/
 
 Chinook.db
 google-credentials.json
