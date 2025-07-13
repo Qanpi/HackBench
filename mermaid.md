@@ -1,0 +1,3 @@
+```mermaid
+'---\nconfig:\n  flowchart:\n    curve: linear\n---\ngraph TD;\n\t__start__([<p>__start__</p>]):::first\n\tplanner(planner)\n\texecutor(executor)\n\t__end__([<p>__end__</p>]):::last\n\t__start__ --> planner;\n\texecutor --> planner;\n\tplanner --> executor;\n\texecutor -.-> __end__;\n\tclassDef default fill:#f2f0ff,line-height:1.2\n\tclassDef first fill-opacity:0\n\tclassDef last fill:#bfb6fc\n'
+```
